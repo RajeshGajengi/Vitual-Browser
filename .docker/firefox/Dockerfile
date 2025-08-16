@@ -10,12 +10,12 @@ RUN set -eux; apt-get update; \
     xz-utils bzip2 libgtk-3-0 libdbus-glib-1-2; \
     #
     # fetch latest release
-    wget -O /tmp/firefox-setup.tar.bz2 "${SRC_URL}"; \
+    wget -O /tmp/firefox-141.0.3.tar.xz "${SRC_URL}"; \
     mkdir /usr/lib/firefox; \
     ls -ltr /tmp; \
-    file /tmp/firefox-setup.tar.bz2; \
-    tar -xjf /tmp/firefox-setup.tar.bz2 -C /usr/lib; \
-    rm -f /tmp/firefox-setup.tar.bz2; \
+    file /tmp/firefox-141.0.3.tar.xz; \
+    tar -xJf /tmp/firefox-141.0.3.tar.xz -C /usr/lib; \
+    rm -f /tmp/firefox-141.0.3.tar.xz; \
     ln -s /usr/lib/firefox/firefox /usr/bin/firefox; \
     #
     # create a profile directory
