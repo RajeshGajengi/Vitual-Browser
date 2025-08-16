@@ -13,7 +13,7 @@ RUN set -eux; apt-get update; \
     wget -O /tmp/firefox-141.0.3.tar.xz "${SRC_URL}"; \
     mkdir /usr/lib/firefox; \
     ls -ltr /tmp; \
-    file /tmp/firefox-141.0.3.tar.xz; \
+    # file /tmp/firefox-141.0.3.tar.xz; \
     tar -xJf /tmp/firefox-141.0.3.tar.xz -C /usr/lib; \
     rm -f /tmp/firefox-141.0.3.tar.xz; \
     ln -s /usr/lib/firefox/firefox /usr/bin/firefox; \
